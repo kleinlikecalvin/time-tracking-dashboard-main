@@ -3,78 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="mainContainer">
+    <div id="profileCard">
+      <div class="columnOne">
+        <div class="profileImageContainer">
+          <img src="images/image-jeremy.png" alt="Profile avatar" id="profileImage">
+        </div> 
+      </div>
+      <div class="columnTwo">
+        <div>
+          Report for
+        </div>
+        <div id="userName">
+          Jeremy Robson
+        </div>
+      </div>
+    </div>
 
-  Report for
-  Jeremy Robson
+    <div id="reportType">
+      <a href="#" id="dailyBtn">
+        Daily
+      </a>
+      <a href="#" id="weeklyBtn">
+        Weekly
+      </a>
+      <a href="#" id="monthlyBtn">
+        Monthly
+      </a>
+    </div>
 
-  Daily
-  Weekly
-  Monthly
+    <div class="reportCard" id="workCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Work
+        </div>
+        <div class="currentHours" id="currentWorkHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>  
+          </a>
+        </div>
+        <div id="previousWorkHours"></div>
+      </div>
+    </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <div class="reportCard" id="playCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Play
+        </div>
+        <div class="currentHours" id="currentPlayHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
+          </a>
+        </div>
+        <div id="previousPlayHours"></div>
+      </div>
+    </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <div class="reportCard" id="studyCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Study
+        </div>
+        <div class="currentHours" id="currentStudyHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
+          </a>
+        </div>
+        <div id="previousStudyHours"></div>
+      </div>
+    </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <div class="reportCard" id="exerciseCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Exercise
+        </div>
+        <div class="currentHours" id="currentExerciseHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
+          </a>
+        </div>
+        <div id="previousExerciseHours"></div>
+      </div>
+    </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <div class="reportCard" id="socialCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Social
+        </div>
+        <div class="currentHours" id="currentSocialHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
+          </a>
+        </div>
+        <div id="previousSocialHours"></div>
+      </div>
+    </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+    <div class="reportCard" id="selfCareCard">
+      <div class="columnOne">
+        <div class="cardHeader">
+          Self Care
+        </div>
+        <div class="currentHours" id="currentSelfCareHours"></div>
+      </div>
+      <div class="columnTwo">
+        <div class="ellipsisContainer">
+          <a href="#">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+            </svg>
+          </a>
+        </div>
+        <div id="previousSelfCareHours"></div>
+      </div>
+  </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="kleinlikecalvin.com">Nikki Klein</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

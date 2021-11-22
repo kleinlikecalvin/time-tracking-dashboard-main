@@ -1,0 +1,130 @@
+/*
+LEFT OFF @
+-Need to add the colored cards behind each stat card
+-Need to add a circle border around the square profile pic
+-Adjust some padding and margins
+-Desktop
+
+
+*/
+
+:root {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  --cardRadius: 10px;
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --infoCardBgColor: hsl(235, 46%, 20%);
+  --cardHoverBgColor: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+  --cardPadding: 25px;
+  --cardMargin: 10px;
+  --transitionTime: 0.5s;
+  --mainFontSize: 15px;
+  --cardHeaderFontSize: 17px;
+  --currentHrsFontSize: 24px;
+}
+body {
+  background-color: var(--veryDarkBlue);
+  font-size: var(--mainFontSize);
+  font-weight: 300;
+}
+.mainContainer {
+  max-width: 375px;
+  margin: 50px auto;
+}
+.columnOne,
+.columnTwo {
+  flex-direction: column;
+}
+.columnOne {
+  text-align: left;
+  background-color: brown;
+}
+.columnTwo {
+  text-align: right;
+  margin: 30px;
+  background-color: firebrick;
+}
+#profileCard {
+  display: flex;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: var(--cardRadius);
+  padding: var(--cardPadding);
+  margin: var(--cardMargin);
+}
+#profileImage {
+  height: 75px;
+  background-color: yellow;
+}
+#profileCard .columnTwo {
+  text-align: left;
+}
+#profileCard p {
+  color: var(--paleBlue);
+}
+#userName {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.cardHeader {
+  font-size: var(--cardHeaderFontSize);
+  font-weight: 500;
+}
+.currentHours {
+  font-size: var(--currentHrsFontSize);
+  font-weight: 300;
+}
+.ellipsis {
+  transition: var(--transitionTime);
+}
+.ellipsis path {
+  fill: #bbc0ff;
+}
+a .ellipsis:hover path {
+  fill: white;
+  transition: var(--transitionTime);
+}
+.reportCard {
+  display: flex;
+  background-color: var(--infoCardBgColor);
+  margin: var(--cardMargin);
+  padding: var(--cardPadding);
+  border-radius: var(--cardRadius);
+  transition: var(--transitionTime);
+}
+.reportCard:hover {
+  transition: var(--transitionTime);
+  background-color: var(--cardHoverBgColor);
+}
+#reportType {
+  background-color: var(--infoCardBgColor);
+  margin: var(--cardMargin);
+  padding: var(--cardPadding);
+  border-radius: var(--cardRadius);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--cardHeaderFontSize);
+  font-weight: 400;
+}
+#reportType a {
+  transition: var(--transitionTime);
+  padding: 5px;
+  color: var(--cardHoverBgColor);
+  text-decoration: none;
+}
+#reportType a:hover {
+  transition: var(--transitionTime);
+  color: white;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 75px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 1440px) {
+}
