@@ -1,8 +1,7 @@
 /*
 LEFT OFF @
--Need to add the colored cards behind each stat card
 -Need to add a circle border around the square profile pic
--Adjust some padding and margins
+-move data cards down a little to match the design
 -Desktop
 
 
@@ -11,7 +10,7 @@ LEFT OFF @
 :root {
   font-family: "Rubik", sans-serif;
   color: white;
-  --cardRadius: 10px;
+  --cardRadius: 15px;
   --veryDarkBlue: hsl(226, 43%, 10%);
   --infoCardBgColor: hsl(235, 46%, 20%);
   --cardHoverBgColor: hsl(235, 45%, 61%);
@@ -21,7 +20,7 @@ LEFT OFF @
   --transitionTime: 0.5s;
   --mainFontSize: 15px;
   --cardHeaderFontSize: 17px;
-  --currentHrsFontSize: 24px;
+  --currentHrsFontSize: 30px;
 }
 body {
   background-color: var(--veryDarkBlue);
@@ -38,25 +37,22 @@ body {
 }
 .columnOne {
   margin: var(--itemMargin) 0 var(--itemMargin) var(--itemMargin);
-  background-color: brown;
 }
 .columnTwo {
   margin: var(--itemMargin) var(--itemMargin) var(--itemMargin) 0;
-  background-color: green;
 }
 /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
 #profileCard {
   display: flex;
   background-color: hsl(246, 80%, 60%);
   border-radius: var(--cardRadius);
-  /* padding: var(--cardPadding); */
   margin: var(--cardMargin);
+  position: relative;
+  top: 30px;
 }
 #profileImage {
   display: block;
-  /* margin: var(--cardMargin) auto; */
   height: 75px;
-  background-color: yellow;
 }
 .reportForUser {
   display: flex;
@@ -76,17 +72,17 @@ body {
 #reportType {
   background-color: var(--infoCardBgColor);
   margin: var(--cardMargin);
-  /* padding: var(--cardPadding); */
   border-radius: var(--cardRadius);
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: var(--cardHeaderFontSize);
   font-weight: 400;
 }
 #reportType a {
   transition: var(--transitionTime);
-  margin: var(--cardPadding);
+  margin: var(--itemMargin);
+  margin-top: 40px;
   color: var(--cardHoverBgColor);
   text-decoration: none;
 }
@@ -94,15 +90,57 @@ body {
   transition: var(--transitionTime);
   color: white;
 }
+.reportContainer {
+  position: relative;
+}
+/* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
+.reportImgContainer {
+  margin: var(--cardMargin);
+  border-radius: var(--cardRadius);
+  text-align: right;
+  position: absolute;
+  width: 355px;
+  /* top: 350px; */
+}
+.reportImgContainer svg {
+  margin-right: var(--itemMargin);
+}
+#workImgCard {
+  background-color: hsl(15, 100%, 70%);
+  top: 0;
+}
+#playImgCard {
+  background-color: hsl(195, 74%, 62%);
+  top: 178px;
+}
+#studyImgCard {
+  background-color: hsl(348, 100%, 68%);
+  top: 356px;
+}
+#exerciseImgCard {
+  background-color: hsl(145, 58%, 55%);
+  top: 534px;
+}
+#socialImgCard {
+  background-color: hsl(264, 64%, 52%);
+  top: 712px;
+}
+#selfCareImgCard {
+  background-color: hsl(43, 84%, 65%);
+  top: 890px;
+}
 /* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
+
 .reportCard {
   display: flex;
   background-color: var(--infoCardBgColor);
   margin: var(--cardMargin);
-  /* padding: var(--cardPadding); */
   border-radius: var(--cardRadius);
   transition: var(--transitionTime);
-  border: 3px solid white;
+  position: absolute;
+  width: 355px;
+  top: 350px;
+  z-index: 1;
 }
 .reportCard:hover {
   transition: var(--transitionTime);
@@ -115,11 +153,14 @@ body {
 .currentHours {
   width: 50%;
   font-size: var(--currentHrsFontSize);
-  font-weight: 300;
 }
 .previousHours {
   width: 50%;
   text-align: right;
+  color: var(--paleBlue);
+}
+.ellipsisContainer {
+  margin-bottom: 15px;
 }
 .ellipsis {
   transition: var(--transitionTime);
@@ -130,6 +171,24 @@ body {
 a .ellipsis:hover path {
   fill: white;
   transition: var(--transitionTime);
+}
+#workCard {
+  top: 50px;
+}
+#playCard {
+  top: 221px;
+}
+#studyCard {
+  top: 392px;
+}
+#exerciseCard {
+  top: 563px;
+}
+#socialCard {
+  top: 734px;
+}
+#selfCareCard {
+  top: 905px;
 }
 /* ~~~~~~~~~ATTRIBUTION~~~~~~~~~~ */
 .attribution {
