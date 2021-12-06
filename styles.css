@@ -16,7 +16,7 @@ LEFT OFF @
   --infoCardBgColor: hsl(235, 46%, 20%);
   --cardHoverBgColor: hsl(235, 45%, 61%);
   --paleBlue: hsl(236, 100%, 87%);
-  --cardPadding: 25px;
+  --itemMargin: 25px;
   --cardMargin: 10px;
   --transitionTime: 0.5s;
   --mainFontSize: 15px;
@@ -37,43 +37,89 @@ body {
   flex-direction: column;
 }
 .columnOne {
-  text-align: left;
+  margin: var(--itemMargin) 0 var(--itemMargin) var(--itemMargin);
   background-color: brown;
 }
 .columnTwo {
-  text-align: right;
-  margin: 30px;
-  background-color: firebrick;
+  margin: var(--itemMargin) var(--itemMargin) var(--itemMargin) 0;
+  background-color: green;
 }
+/* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
 #profileCard {
   display: flex;
   background-color: hsl(246, 80%, 60%);
   border-radius: var(--cardRadius);
-  padding: var(--cardPadding);
+  /* padding: var(--cardPadding); */
   margin: var(--cardMargin);
 }
 #profileImage {
+  display: block;
+  /* margin: var(--cardMargin) auto; */
   height: 75px;
   background-color: yellow;
 }
-#profileCard .columnTwo {
-  text-align: left;
+.reportForUser {
+  display: flex;
+  justify-content: center;
+  margin-left: var(--itemMargin);
+  letter-spacing: 1px;
 }
-#profileCard p {
-  color: var(--paleBlue);
+#reportFor {
+  font-size: 14px;
 }
 #userName {
   font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* ~~~~~~~~~REPORT TYPE CARD~~~~~~~~~~ */
+#reportType {
+  background-color: var(--infoCardBgColor);
+  margin: var(--cardMargin);
+  /* padding: var(--cardPadding); */
+  border-radius: var(--cardRadius);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--cardHeaderFontSize);
+  font-weight: 400;
+}
+#reportType a {
+  transition: var(--transitionTime);
+  margin: var(--cardPadding);
+  color: var(--cardHoverBgColor);
+  text-decoration: none;
+}
+#reportType a:hover {
+  transition: var(--transitionTime);
+  color: white;
+}
+/* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
+.reportCard {
+  display: flex;
+  background-color: var(--infoCardBgColor);
+  margin: var(--cardMargin);
+  /* padding: var(--cardPadding); */
+  border-radius: var(--cardRadius);
+  transition: var(--transitionTime);
+  border: 3px solid white;
+}
+.reportCard:hover {
+  transition: var(--transitionTime);
+  background-color: var(--cardHoverBgColor);
 }
 .cardHeader {
   font-size: var(--cardHeaderFontSize);
   font-weight: 500;
 }
 .currentHours {
+  width: 50%;
   font-size: var(--currentHrsFontSize);
   font-weight: 300;
+}
+.previousHours {
+  width: 50%;
+  text-align: right;
 }
 .ellipsis {
   transition: var(--transitionTime);
@@ -85,39 +131,7 @@ a .ellipsis:hover path {
   fill: white;
   transition: var(--transitionTime);
 }
-.reportCard {
-  display: flex;
-  background-color: var(--infoCardBgColor);
-  margin: var(--cardMargin);
-  padding: var(--cardPadding);
-  border-radius: var(--cardRadius);
-  transition: var(--transitionTime);
-}
-.reportCard:hover {
-  transition: var(--transitionTime);
-  background-color: var(--cardHoverBgColor);
-}
-#reportType {
-  background-color: var(--infoCardBgColor);
-  margin: var(--cardMargin);
-  padding: var(--cardPadding);
-  border-radius: var(--cardRadius);
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--cardHeaderFontSize);
-  font-weight: 400;
-}
-#reportType a {
-  transition: var(--transitionTime);
-  padding: 5px;
-  color: var(--cardHoverBgColor);
-  text-decoration: none;
-}
-#reportType a:hover {
-  transition: var(--transitionTime);
-  color: white;
-}
+/* ~~~~~~~~~ATTRIBUTION~~~~~~~~~~ */
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -126,5 +140,6 @@ a .ellipsis:hover path {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media screen and (min-width: 1440px) {
-}
+/* ~~~~~~~~~DESKTOP~~~~~~~~~~ */
+/* @media screen and (min-width: 1440px) {
+} */

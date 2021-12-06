@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+ 
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 
 <body>
   <div class="mainContainer">
+
     <div id="profileCard">
+
       <div class="columnOne">
         <div class="profileImageContainer">
           <img src="images/image-jeremy.png" alt="Profile avatar" id="profileImage">
         </div> 
       </div>
-      <div class="columnTwo">
-        <div>
+
+      <div class="columnTwo reportForUser">
+        <div id="reportFor">
           Report for
         </div>
         <div id="userName">
           Jeremy Robson
         </div>
       </div>
+
     </div>
 
     <div id="reportType">
@@ -42,13 +48,15 @@
     </div>
 
     <div class="reportCard" id="workCard">
-      <div class="columnOne">
+
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Work
         </div>
-        <div class="currentHours" id="currentWorkHours"></div>
+        <div id="currentWorkHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -59,16 +67,19 @@
         </div>
         <div id="previousWorkHours"></div>
       </div>
+
     </div>
 
     <div class="reportCard" id="playCard">
-      <div class="columnOne">
+
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Play
         </div>
         <div class="currentHours" id="currentPlayHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -79,16 +90,19 @@
         </div>
         <div id="previousPlayHours"></div>
       </div>
+
     </div>
 
     <div class="reportCard" id="studyCard">
-      <div class="columnOne">
+
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Study
         </div>
         <div class="currentHours" id="currentStudyHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -99,16 +113,19 @@
         </div>
         <div id="previousStudyHours"></div>
       </div>
+
     </div>
 
     <div class="reportCard" id="exerciseCard">
-      <div class="columnOne">
+
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Exercise
         </div>
         <div class="currentHours" id="currentExerciseHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -119,16 +136,19 @@
         </div>
         <div id="previousExerciseHours"></div>
       </div>
+
     </div>
 
     <div class="reportCard" id="socialCard">
-      <div class="columnOne">
+
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Social
         </div>
         <div class="currentHours" id="currentSocialHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -139,16 +159,19 @@
         </div>
         <div id="previousSocialHours"></div>
       </div>
+
     </div>
 
     <div class="reportCard" id="selfCareCard">
-      <div class="columnOne">
+      
+      <div class="columnOne currentHours">
         <div class="cardHeader">
           Self Care
         </div>
         <div class="currentHours" id="currentSelfCareHours"></div>
       </div>
-      <div class="columnTwo">
+
+      <div class="columnTwo previousHours">
         <div class="ellipsisContainer">
           <a href="#">
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="ellipsis">
@@ -159,6 +182,7 @@
         </div>
         <div id="previousSelfCareHours"></div>
       </div>
+
   </div>
 
   <div class="attribution">
