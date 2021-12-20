@@ -1,7 +1,6 @@
 /*
 LEFT OFF @
--Need to add a circle border around the square profile pic
--move data cards down a little to match the design
+
 -Desktop
 
 
@@ -54,6 +53,10 @@ body {
   display: block;
   height: 75px;
 }
+.profileImageContainer{
+  border: 3px solid white;
+  border-radius: 50%;
+}
 .reportForUser {
   display: flex;
   justify-content: center;
@@ -100,17 +103,16 @@ body {
   text-align: right;
   position: absolute;
   width: 355px;
-  /* top: 350px; */
 }
 .reportImgContainer svg {
   margin-right: var(--itemMargin);
 }
 #workImgCard {
   background-color: hsl(15, 100%, 70%);
-  top: 0;
 }
 #playImgCard {
   background-color: hsl(195, 74%, 62%);
+  height: 100px;
   top: 178px;
 }
 #studyImgCard {
@@ -119,6 +121,7 @@ body {
 }
 #exerciseImgCard {
   background-color: hsl(145, 58%, 55%);
+  height: 100px;
   top: 534px;
 }
 #socialImgCard {
@@ -173,22 +176,22 @@ a .ellipsis:hover path {
   transition: var(--transitionTime);
 }
 #workCard {
-  top: 50px;
+  top: 42px;
 }
 #playCard {
   top: 221px;
 }
 #studyCard {
-  top: 392px;
+  top: 398px;
 }
 #exerciseCard {
-  top: 563px;
+  top: 576px;
 }
 #socialCard {
-  top: 734px;
+  top: 752px;
 }
 #selfCareCard {
-  top: 905px;
+  top: 930px;
 }
 /* ~~~~~~~~~ATTRIBUTION~~~~~~~~~~ */
 .attribution {
