@@ -28,9 +28,15 @@
                 </div>
             </div>
             <div class="reportTypeCard">
-                <a href="#"><h3>Daily</h3></a>
-                <a href="#"><h3>Weekly</h3></a>
-                <a href="#"><h3>Monthly</h3></a>
+                <a href="#" id="dailyBtn" value="DAILY">
+                    <h3>Daily</h3>
+                </a>
+                <a href="#" id="weeklyBtn">
+                    <h3>Weekly</h3>
+                </a>
+                <a href="#" id="monthlyBtn">
+                    <h3>Monthly</h3>
+                </a>
             </div>
         </div>
 
@@ -41,71 +47,125 @@
                     <img src="./images/icon-work.svg" alt="">
                 </div>
                 <div class="reportCard">
-                    <h4>Work</h4>
-                    <div class="ellipsisCont">
-                        <a href="#">
-                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
-                        </a>
+                    <div class="row1">
+                        <h4>Work</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hoursCont">
-                        <p class="currentHours">C</p>
-                        <p class="previousHours">P</p>
+
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentWorkHours"></p>
+                        <p class="previousHours" id="previousWorkHours"></p>
                     </div>
                 </div>
-            </div>
+            </div> <!--END REPORT CONT-->
 
             <div class="reportCont">
                 <div class="reportImgCard" id="playImgCard">
                     <img src="./images/icon-play.svg" alt="">
                 </div>
                 <div class="reportCard">
-                    <h4>Play</h4>
-                    <div class="ellipsisCont">
-                        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                    <div class="row1">
+                        <h4>Play</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hoursCont">
-                        <p class="currentHours">C</p>
-                        <p class="previousHours">P</p>
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentPlayHours"></p>
+                        <p class="previousHours" id="previousPlayHours"></p>
                     </div>
                 </div>
-            </div>
+            </div> <!--END REPORT CONT-->
 
             <div class="reportCont">
                 <div class="reportImgCard" id="studyImgCard">
                     <img src="./images/icon-study.svg" alt="">
                 </div>
                 <div class="reportCard">
-                    <h4>Study</h4>
-                    <div class="ellipsisCont">
-                        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                    <div class="row1">
+                        <h4>Study</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hoursCont">
-                        <p class="currentHours">C</p>
-                        <p class="previousHours">P</p>
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentStudyHours"></p>
+                        <p class="previousHours" id="previousStudyHours"></p>
                     </div>
                 </div>
-            </div>        
+            </div>  <!--END REPORT CONT-->      
             
             <div class="reportCont">
                 <div class="reportImgCard" id="exerciseImgCard">
                     <img src="./images/icon-exercise.svg" alt="">
                 </div>
                 <div class="reportCard">
-                    <h4>Exercise</h4>
-                    <div class="ellipsisCont">
-                        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                    <div class="row1">
+                        <h4>Exercise</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hoursCont">
-                        <p class="currentHours">C</p>
-                        <p class="previousHours">P</p>
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentExerciseHours"></p>
+                        <p class="previousHours" id="previousExerciseHours"></p>
                     </div>
                 </div>
-            </div> 
+            </div> <!--END REPORT CONT-->
 
-            
-        </div>
+            <div class="reportCont">
+                <div class="reportImgCard" id="socialImgCard">
+                    <img src="./images/icon-social.svg" alt="">
+                </div>
+                <div class="reportCard">
+                    <div class="row1">
+                        <h4>Social</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentSocialHours"></p>
+                        <p class="previousHours" id="previousSocialHours"></p>
+                    </div>
+                </div>
+            </div> <!--END REPORT CONT-->
 
-    </div>
-    
+            <div class="reportCont">
+                <div class="reportImgCard" id="selfCareImgCard">
+                    <img src="./images/icon-self-care.svg" alt="">
+                </div>
+                <div class="reportCard">
+                    <div class="row1">
+                        <h4>Self Care</h4>
+                        <div class="ellipsisCont">
+                            <a href="#">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hoursCont row2">
+                        <p class="currentHours" id="currentSelfCareHours"></p>
+                        <p class="previousHours" id="previousSelfCareHours"></p>
+                    </div>
+                </div>
+            </div> <!--END REPORT CONT-->
+
+        </div> <!--END REPORTSSSSSSS CONT-->
+
+    </div> <!--END MAIN CONT-->
+    <script src="script.js"></script>
 </body>
 </html>
