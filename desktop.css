@@ -1,0 +1,249 @@
+:root {
+    font-family: "Rubik", sans-serif;
+    color: white;
+    --cardRadius: 15px;
+    --desktopCardHeight: 200px;
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --infoCardBgColor: hsl(235, 46%, 20%);
+    --cardHoverBgColor: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+    --itemMargin: 25px;
+    --cardMargin: 25px;
+    --cardPadding: 30px;
+    --transitionTime: 0.5s;
+    --mainFontSize: 15px;
+    --cardHeaderFontSize: 17px;
+    --currentHrsFontSize: 30px;
+    --desktopContsWidth: 310px;
+  }
+body {
+    background-color: var(--veryDarkBlue);
+    font-size: var(--mainFontSize);
+    /* font-weight: 300; */
+}
+.mainCont {
+    max-width: 1440px;
+    margin: 50px;
+    border: 3px solid white;  
+    display: flex;
+    /* align-content: space-between; */
+    /* gap: 20px; */
+}
+  /* .columnOne,
+  .columnTwo {
+    flex-direction: column;
+  } */
+  /* .columnOne {
+    margin: var(--itemMargin) 0 var(--itemMargin) var(--itemMargin);
+  }
+  .columnTwo {
+    margin: var(--itemMargin) var(--itemMargin) var(--itemMargin) 0;
+  } */
+  /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
+  .profileReportTypeCont {
+      min-width: var(--desktopContsWidth);
+      margin-right: var(--cardMargin);
+  }
+  .profileCard {
+    /* display: flex; */
+    background-color: hsl(246, 80%, 60%);
+    border-radius: var(--cardRadius);
+    min-height: 355px;
+    /* text-align: end; */
+    justify-items: flex-end;
+    padding: var(--cardPadding);
+    /* margin: var(--cardMargin); */
+    /* position: relative; */
+    /* top: 30px; */
+  }
+  .profileImgCont{
+    border: 3px solid white;
+    border-radius: 50%;
+    /* display: block; */
+    height: 75px;
+    width: 75px;
+  }
+  .profileCard img {
+    display: block;
+    height: 100%;
+    /* height: 75px; */
+  }
+  .reportForCont {
+    /* display: flex;
+    justify-content: center; */
+    /* margin-left: var(--itemMargin); */
+    letter-spacing: 1px;
+    height: var(--desktopCardHeight);
+    border: 3px solid white;
+    /* font-weight: 300; */
+
+  }
+  .reportForCont h1 {
+    font-size: 14px;
+    font-weight: 300;
+
+  }
+  .reportForCont h2{
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  /* ~~~~~~~~~REPORT TYPE CARD~~~~~~~~~~ */
+  .reportTypeCard {
+    background-color: var(--infoCardBgColor);
+    /* margin: var(--cardMargin); */
+    border-radius: var(--cardRadius);
+    /* text-align: center;
+    display: flex; */
+    /* justify-content: space-around; */
+    font-size: var(--cardHeaderFontSize);
+    font-weight: 400;
+    height: var(--desktopCardHeight);
+    padding: var(--cardPadding);
+
+    /* border: 3px solid white; */
+
+
+  }
+  .reportTypeCard a{
+    transition: var(--transitionTime);
+    /* margin: var(--itemMargin); */
+    margin-top: 40px;
+    color: var(--cardHoverBgColor);
+    text-decoration: none;
+  }
+  .reportTypeCard a:hover {
+    transition: var(--transitionTime);
+    color: white;
+  }
+  /* .reportContainer {
+    position: relative;
+  } */
+
+  /* ~~~~~~~~~VARIOUS REPORT CARDSSSSS PLURAL CONTAINER~~~~~~~~~~ */
+  .reportsCont{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* gap: var(--cardMargin); */
+      /* margin:  var(--cardMargin); */
+  }
+
+  /* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
+  .reportCont {
+    width: var(--desktopContsWidth);
+    /* border: 3px solid white; */
+
+}
+  .reportImgCard {
+    /* margin: var(--cardMargin); */
+    border-radius: var(--cardRadius);
+    text-align: right;
+    height: 75px;
+    /* position: absolute;
+    width: 355px; */
+  }
+  .reportImgCard img{
+    margin-right: var(--itemMargin);
+  }
+  #workImgCard {
+    background-color: hsl(15, 100%, 70%);
+  }
+  #playImgCard {
+    background-color: hsl(195, 74%, 62%);
+    /* top: 178px; */
+  }
+  #studyImgCard {
+    background-color: hsl(348, 100%, 68%);
+    /* top: 356px; */
+  }
+  #exerciseImgCard {
+    background-color: hsl(145, 58%, 55%);
+    /* top: 534px; */
+  }
+  #socialImgCard {
+    background-color: hsl(264, 64%, 52%);
+    /* top: 712px; */
+  }
+  #selfCareImgCard {
+    background-color: hsl(43, 84%, 65%);
+    /* top: 890px; */
+  }
+  /* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
+  
+  .reportCard {
+    display: flex;
+    /* flex-direction: column; */
+    background-color: var(--infoCardBgColor);
+    /* margin: var(--cardMargin); */
+    border-radius: var(--cardRadius);
+    transition: var(--transitionTime);
+    /* position: absolute;
+    width: 355px;
+    top: 350px; */
+    z-index: 1;
+    height: var(--desktopCardHeight);
+    padding: var(--cardPadding);
+
+  }
+  .reportCard:hover {
+    transition: var(--transitionTime);
+    background-color: var(--cardHoverBgColor);
+  }
+  .reportCard h4{
+    font-size: var(--cardHeaderFontSize);
+    font-weight: 500;
+    float: left;
+  }
+
+  /* .cardHeader {
+    font-size: var(--cardHeaderFontSize);
+    font-weight: 500;
+  } */
+  .ellipsisCont {
+    /* margin-bottom: 15px; */
+    top: 0;
+    float: right;
+    /* position: relative; */
+    border: 3px solid white;
+
+  }
+  .ellipsisCont a {
+    transition: var(--transitionTime);
+  }
+  /* .ellipsisCont svg {
+    /* display: flex; */
+    /* flex-direction: column; */
+  /* } */ */
+  .ellipsisCont a svg path {
+    fill: #bbc0ff;
+  }
+  .ellipsisCont a:hover svg path {
+    fill: white;
+    transition: var(--transitionTime);
+  }
+  .hoursCont   {
+      display: flex;
+      /* float: unset; */
+  }
+  .currentHours {
+    width: 50%;
+    font-size: var(--currentHrsFontSize);
+  }
+  .previousHours {
+    width: 50%;
+    text-align: right;
+    color: var(--paleBlue);
+  }
+  #workCard {
+    top: 42px;
+  }
+  #playCard {
+    top: 221px;
+  }
+  #studyCard {
+    top: 398px;
+  }
+  #exerciseCard {
+    top: 576px;
+  }

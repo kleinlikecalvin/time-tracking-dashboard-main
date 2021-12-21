@@ -212,173 +212,130 @@ a .ellipsis:hover path {
     display: flex;
     flex-direction: column;
   }
-  .columnOne {
-    margin: var(--itemMargin) 0 var(--itemMargin) var(--itemMargin);
-  }
-  .columnTwo {
-    margin: var(--itemMargin) var(--itemMargin) var(--itemMargin) 0;
+  .reportsCont{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    border: 3px solid white;
   }
   /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
-  #profileCard {
-    display: flex;
-    background-color: hsl(246, 80%, 60%);
-    border-radius: var(--cardRadius);
-    margin: var(--cardMargin);
-    position: relative;
-    top: 30px;
-  }
-  #profileImage {
-    display: block;
-    height: 75px;
-  }
-  .profileImageContainer{
-    border: 3px solid white;
-    border-radius: 50%;
-  }
-  .reportForUser {
-    display: flex;
-    justify-content: center;
-    margin-left: var(--itemMargin);
-    letter-spacing: 1px;
-  }
-  #reportFor {
-    font-size: 14px;
-  }
-  #userName {
-    font-weight: 300;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  /* ~~~~~~~~~REPORT TYPE CARD~~~~~~~~~~ */
-  #reportType {
-    background-color: var(--infoCardBgColor);
-    margin: var(--cardMargin);
-    border-radius: var(--cardRadius);
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: var(--cardHeaderFontSize);
-    font-weight: 400;
-  }
-  #reportType a {
-    transition: var(--transitionTime);
-    margin: var(--itemMargin);
-    margin-top: 40px;
-    color: var(--cardHoverBgColor);
-    text-decoration: none;
-  }
-  #reportType a:hover {
-    transition: var(--transitionTime);
-    color: white;
-  }
-  .reportContainer {
-    position: relative;
-  }
-  /* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
-  .reportImgContainer {
-    margin: var(--cardMargin);
-    border-radius: var(--cardRadius);
-    text-align: right;
-    position: absolute;
-    width: 355px;
-  }
-  .reportImgContainer svg {
-    margin-right: var(--itemMargin);
-  }
-  #workImgCard {
-    background-color: hsl(15, 100%, 70%);
-  }
-  #playImgCard {
-    background-color: hsl(195, 74%, 62%);
-    height: 100px;
-    top: 178px;
-  }
-  #studyImgCard {
-    background-color: hsl(348, 100%, 68%);
-    top: 356px;
-  }
-  #exerciseImgCard {
-    background-color: hsl(145, 58%, 55%);
-    height: 100px;
-    top: 534px;
-  }
-  #socialImgCard {
-    background-color: hsl(264, 64%, 52%);
-    top: 712px;
-  }
-  #selfCareImgCard {
-    background-color: hsl(43, 84%, 65%);
-    top: 890px;
-  }
-  /* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
-  
-  .reportCard {
-    display: flex;
-    background-color: var(--infoCardBgColor);
-    margin: var(--cardMargin);
-    border-radius: var(--cardRadius);
-    transition: var(--transitionTime);
-    position: absolute;
-    width: 355px;
-    top: 350px;
-    z-index: 1;
-  }
-  .reportCard:hover {
-    transition: var(--transitionTime);
-    background-color: var(--cardHoverBgColor);
-  }
-  .cardHeader {
-    font-size: var(--cardHeaderFontSize);
-    font-weight: 500;
-  }
-  .currentHours {
-    width: 50%;
-    font-size: var(--currentHrsFontSize);
-  }
-  .previousHours {
-    width: 50%;
-    text-align: right;
-    color: var(--paleBlue);
-  }
-  .ellipsisContainer {
-    margin-bottom: 15px;
-  }
-  .ellipsis {
-    transition: var(--transitionTime);
-  }
-  .ellipsis path {
-    fill: #bbc0ff;
-  }
-  a .ellipsis:hover path {
-    fill: white;
-    transition: var(--transitionTime);
-  }
-  #workCard {
-    top: 42px;
-  }
-  #playCard {
-    top: 221px;
-  }
-  #studyCard {
-    top: 398px;
-  }
-  #exerciseCard {
-    top: 576px;
-  }
-  #socialCard {
-    top: 752px;
-  }
-  #selfCareCard {
-    top: 930px;
-  }
-  /* ~~~~~~~~~ATTRIBUTION~~~~~~~~~~ */
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-    margin-top: 75px;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+#profileCard {
+  display: flex;
+  flex-direction: column;
+  /* background-color: hsl(246, 80%, 60%);
+  border-radius: var(--cardRadius);
+  margin: var(--cardMargin);
+  position: relative; */
+  top: 0px;
+}
+/* #profileImage {
+  display: inline;
+  height: 75px;
+} */
+.profileImageContainer{
 
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.reportForUser {
+  display: flex;
+  justify-content: center;
+  margin-left: var(--itemMargin);
+  letter-spacing: 1px;
+}
+#reportFor {
+  font-size: 14px;
+}
+#userName {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
+.reportImgContainer {
+  margin: var(--cardMargin);
+  border-radius: var(--cardRadius);
+  text-align: right;
+  /* position: absolute; */
+  /* width: 355px; */
+}
+.reportImgContainer svg {
+  margin-right: var(--itemMargin);
+}
+#workImgCard {
+  background-color: hsl(15, 100%, 70%);
+}
+#playImgCard {
+  background-color: hsl(195, 74%, 62%);
+  height: 100px;
+  top: auto;
+}
+#studyImgCard {
+  background-color: hsl(348, 100%, 68%);
+  top: auto;
+}
+#exerciseImgCard {
+  background-color: hsl(145, 58%, 55%);
+  height: 100px;
+  top: auto;
+}
+#socialImgCard {
+  background-color: hsl(264, 64%, 52%);
+  top: auto;
+}
+#selfCareImgCard {
+  background-color: hsl(43, 84%, 65%);
+  top: auto;
+}
+/* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
+
+.reportCard {
+  display: flex;
+  background-color: var(--infoCardBgColor);
+  margin: var(--cardMargin);
+  border-radius: var(--cardRadius);
+  transition: var(--transitionTime);
+  /* position: absolute; */
+  /* width: 355px; */
+  top: 350px;
+  z-index: 1;
+}
+.reportCard:hover {
+  transition: var(--transitionTime);
+  background-color: var(--cardHoverBgColor);
+}
+.cardHeader {
+  font-size: var(--cardHeaderFontSize);
+  font-weight: 500;
+}
+.currentHours {
+  width: 50%;
+  font-size: var(--currentHrsFontSize);
+}
+.previousHours {
+  width: 50%;
+  text-align: right;
+  color: var(--paleBlue);
+}
+.ellipsisContainer {
+  margin-bottom: 15px;
+}
+#workCard {
+  top: auto;
+}
+#playCard {
+  top: auto;
+}
+#studyCard {
+  top: auto;
+}
+#exerciseCard {
+  top: auto;
+}
+#socialCard {
+  top: auto;
+}
+#selfCareCard {
+  top: auto;
+}
 }
