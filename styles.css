@@ -1,9 +1,5 @@
-/*
-LEFT OFF @
-
--Desktop
-
-
+/* LEFT OFF @ 
+-mobile
 */
 
 :root {
@@ -14,328 +10,185 @@ LEFT OFF @
   --infoCardBgColor: hsl(235, 46%, 20%);
   --cardHoverBgColor: hsl(235, 45%, 61%);
   --paleBlue: hsl(236, 100%, 87%);
-  --itemMargin: 25px;
-  --cardMargin: 10px;
+  --cardMargin: 25px;
+  --cardPadding: 15px 30px;
   --transitionTime: 0.5s;
   --mainFontSize: 15px;
-  --cardHeaderFontSize: 17px;
-  --currentHrsFontSize: 30px;
+  --desktopContsWidth: 255px;
+  --desktopCardHeight: 170px;
+  --desktopCardWidth: 195px;
 }
 body {
   background-color: var(--veryDarkBlue);
   font-size: var(--mainFontSize);
-  font-weight: 300;
 }
-.mainContainer {
-  max-width: 375px;
-  margin: 50px auto;
-}
-.columnOne,
-.columnTwo {
-  flex-direction: column;
-}
-.columnOne {
-  margin: var(--itemMargin) 0 var(--itemMargin) var(--itemMargin);
-}
-.columnTwo {
-  margin: var(--itemMargin) var(--itemMargin) var(--itemMargin) 0;
+.mainCont {
+  width: 1150px;
+  height: 525px;
+  margin: 50px;
+  display: flex;
 }
 /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
-#profileCard {
-  display: flex;
+.profileReportTypeCont {
+  width: var(--desktopContsWidth);
+}
+.profileCard {
   background-color: hsl(246, 80%, 60%);
   border-radius: var(--cardRadius);
-  margin: var(--cardMargin);
-  position: relative;
-  top: 30px;
+  padding: 30px;
+  height: 295px;
+  position: absolute;
+  z-index: 1;
+  width: var(--desktopCardWidth);
 }
-#profileImage {
-  display: block;
-  height: 75px;
-}
-.profileImageContainer{
+.profileImgCont {
   border: 3px solid white;
   border-radius: 50%;
+  height: 75px;
+  width: 75px;
 }
-.reportForUser {
+.profileCard img {
+  height: 100%;
+}
+.reportForCont {
   display: flex;
-  justify-content: center;
-  margin-left: var(--itemMargin);
+  flex-direction: column;
+  color: var(--paleBlue);
+  margin-top: 40px;
+}
+.reportForCont h1 {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+}
+.reportForCont h2 {
+  font-weight: 300;
+  font-size: 38px;
+  margin: 0;
+  color: white;
   letter-spacing: 1px;
 }
-#reportFor {
-  font-size: 14px;
-}
-#userName {
-  font-weight: 300;
-  font-size: 20px;
-  margin-top: 10px;
-}
 /* ~~~~~~~~~REPORT TYPE CARD~~~~~~~~~~ */
-#reportType {
+.reportTypeCard {
   background-color: var(--infoCardBgColor);
-  margin: var(--cardMargin);
   border-radius: var(--cardRadius);
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  font-size: var(--cardHeaderFontSize);
-  font-weight: 400;
+  height: var(--desktopCardHeight);
+  padding: 30px 30px 0 30px;
+  position: absolute;
+  z-index: 0;
+  top: 370px;
+  width: var(--desktopCardWidth);
 }
-#reportType a {
+.reportTypeCard a {
   transition: var(--transitionTime);
-  margin: var(--itemMargin);
-  margin-top: 40px;
   color: var(--cardHoverBgColor);
   text-decoration: none;
 }
-#reportType a:hover {
+.reportTypeCard a:hover {
   transition: var(--transitionTime);
   color: white;
 }
-.reportContainer {
-  position: relative;
+.reportTypeCard h3 {
+  font-size: var(--cardHeaderFontSize);
+  font-weight: 300;
+  font-size: 18px;
+  padding-top: 8px;
+}
+/* ~~~~~~~~~VARIOUS REPORT CARDSSSSS PLURAL CONTAINER~~~~~~~~~~ */
+.reportsCont {
+  display: flex;
+  flex-direction: column;
+}
+.reportsRow1,
+.reportsRow2 {
+  display: flex;
+  align-content: space-;
+}
+.reportsRow2 {
+  margin-top: 170px;
 }
 /* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
-.reportImgContainer {
-  margin: var(--cardMargin);
+.reportCont {
+  width: var(--desktopContsWidth);
+  margin: 0 0 30px 30px;
+}
+.reportImgCard {
   border-radius: var(--cardRadius);
   text-align: right;
-  position: absolute;
-  width: 355px;
-}
-.reportImgContainer svg {
-  margin-right: var(--itemMargin);
+  height: 75px;
+  padding-right: 15px;
 }
 #workImgCard {
   background-color: hsl(15, 100%, 70%);
 }
 #playImgCard {
   background-color: hsl(195, 74%, 62%);
-  height: 100px;
-  top: 178px;
 }
 #studyImgCard {
   background-color: hsl(348, 100%, 68%);
-  top: 356px;
 }
 #exerciseImgCard {
   background-color: hsl(145, 58%, 55%);
-  height: 100px;
-  top: 534px;
 }
 #socialImgCard {
   background-color: hsl(264, 64%, 52%);
-  top: 712px;
 }
 #selfCareImgCard {
   background-color: hsl(43, 84%, 65%);
-  top: 890px;
 }
 /* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
-
 .reportCard {
-  display: flex;
   background-color: var(--infoCardBgColor);
-  margin: var(--cardMargin);
   border-radius: var(--cardRadius);
   transition: var(--transitionTime);
   position: absolute;
-  width: 355px;
-  top: 350px;
+  width: var(--desktopCardWidth);
+  height: var(--desktopCardHeight);
   z-index: 1;
+  padding: var(--cardPadding);
+}
+.reportsRow1 .reportCard {
+  top: 95px;
+}
+.reportsRow2 .reportCard {
+  top: 370px;
 }
 .reportCard:hover {
   transition: var(--transitionTime);
   background-color: var(--cardHoverBgColor);
 }
-.cardHeader {
+.reportCard h4 {
   font-size: var(--cardHeaderFontSize);
   font-weight: 500;
 }
-.currentHours {
-  width: 50%;
-  font-size: var(--currentHrsFontSize);
+.row1 {
+  display: flex;
+  justify-content: space-between;
 }
-.previousHours {
-  width: 50%;
-  text-align: right;
-  color: var(--paleBlue);
+.ellipsisCont {
+  align-self: center;
 }
-.ellipsisContainer {
-  margin-bottom: 15px;
-}
-.ellipsis {
+.ellipsisCont a {
   transition: var(--transitionTime);
 }
-.ellipsis path {
+.ellipsisCont a path {
   fill: #bbc0ff;
 }
-a .ellipsis:hover path {
+.ellipsisCont a:hover path {
   fill: white;
   transition: var(--transitionTime);
 }
-#workCard {
-  top: 42px;
-}
-#playCard {
-  top: 221px;
-}
-#studyCard {
-  top: 398px;
-}
-#exerciseCard {
-  top: 576px;
-}
-#socialCard {
-  top: 752px;
-}
-#selfCareCard {
-  top: 930px;
-}
-/* ~~~~~~~~~ATTRIBUTION~~~~~~~~~~ */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin-top: 75px;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-/* ~~~~~~~~~DESKTOP~~~~~~~~~~ */
-@media screen and (min-width: 1440px) {
-  .mainContainer {
-    max-width: 1440px;
-    display: flex;
-  }
-  .profileReportTypeCont{
-    display: flex;
-    flex-direction: column;
-  }
-  .reportsCont{
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    border: 3px solid white;
-  }
-  /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
-#profileCard {
+.row2 {
   display: flex;
   flex-direction: column;
-  /* background-color: hsl(246, 80%, 60%);
-  border-radius: var(--cardRadius);
-  margin: var(--cardMargin);
-  position: relative; */
-  top: 0px;
-}
-/* #profileImage {
-  display: inline;
-  height: 75px;
-} */
-.profileImageContainer{
-
-  border: 3px solid white;
-  border-radius: 50%;
-}
-.reportForUser {
-  display: flex;
-  justify-content: center;
-  margin-left: var(--itemMargin);
-  letter-spacing: 1px;
-}
-#reportFor {
-  font-size: 14px;
-}
-#userName {
-  font-weight: 300;
-  font-size: 20px;
-  margin-top: 10px;
-}
-/* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
-.reportImgContainer {
-  margin: var(--cardMargin);
-  border-radius: var(--cardRadius);
-  text-align: right;
-  /* position: absolute; */
-  /* width: 355px; */
-}
-.reportImgContainer svg {
-  margin-right: var(--itemMargin);
-}
-#workImgCard {
-  background-color: hsl(15, 100%, 70%);
-}
-#playImgCard {
-  background-color: hsl(195, 74%, 62%);
-  height: 100px;
-  top: auto;
-}
-#studyImgCard {
-  background-color: hsl(348, 100%, 68%);
-  top: auto;
-}
-#exerciseImgCard {
-  background-color: hsl(145, 58%, 55%);
-  height: 100px;
-  top: auto;
-}
-#socialImgCard {
-  background-color: hsl(264, 64%, 52%);
-  top: auto;
-}
-#selfCareImgCard {
-  background-color: hsl(43, 84%, 65%);
-  top: auto;
-}
-/* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
-
-.reportCard {
-  display: flex;
-  background-color: var(--infoCardBgColor);
-  margin: var(--cardMargin);
-  border-radius: var(--cardRadius);
-  transition: var(--transitionTime);
-  /* position: absolute; */
-  /* width: 355px; */
-  top: 350px;
-  z-index: 1;
-}
-.reportCard:hover {
-  transition: var(--transitionTime);
-  background-color: var(--cardHoverBgColor);
-}
-.cardHeader {
-  font-size: var(--cardHeaderFontSize);
-  font-weight: 500;
 }
 .currentHours {
-  width: 50%;
-  font-size: var(--currentHrsFontSize);
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
 }
 .previousHours {
-  width: 50%;
-  text-align: right;
+  margin: 0;
+  margin-top: 10px;
   color: var(--paleBlue);
-}
-.ellipsisContainer {
-  margin-bottom: 15px;
-}
-#workCard {
-  top: auto;
-}
-#playCard {
-  top: auto;
-}
-#studyCard {
-  top: auto;
-}
-#exerciseCard {
-  top: auto;
-}
-#socialCard {
-  top: auto;
-}
-#selfCareCard {
-  top: auto;
-}
 }
