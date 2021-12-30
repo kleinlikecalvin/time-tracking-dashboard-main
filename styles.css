@@ -1,7 +1,3 @@
-/* LEFT OFF @ 
--mobile
-*/
-
 :root {
   font-family: "Rubik", sans-serif;
   color: white;
@@ -43,10 +39,10 @@ body {
 .profileImgCont {
   border: 3px solid white;
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
 }
-.profileCard img {
+.profileImgCont img {
   height: 100%;
 }
 .reportForCont {
@@ -142,7 +138,6 @@ body {
   position: absolute;
   width: var(--desktopCardWidth);
   height: var(--desktopCardHeight);
-  /* z-index: 1; */
   padding: var(--cardPadding);
 }
 .reportsRow1 .reportCard {
@@ -193,106 +188,56 @@ body {
 @media only screen and (max-width: 700px) {
   :root {
     --mobileContsWidth: 325px;
+    --mobileContHeight: 200px;
     --mobileCardWidth: 325px;
     --mobileCardHeight: 95px;
     --mobileCardPadding: 20px 0 20px 0;
     --cardMarginBtm: 20px;
-    --mobileContHeight: 200px;
   }
   .mainCont {
     width: 325px;
     height: unset;
-    /* margin: 50px; */
-    /* display: flex; */
     flex-direction: column;
-    /* border: 3px solid white; */
   }
   /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
   .profileReportTypeCont {
     width: var(--mobileContsWidth);
     height: var(--mobileContHeight);
     margin-bottom: 20px;
-    /* border: 3px solid white; */
   }
   .profileCard {
-    /* background-color: hsl(246, 80%, 60%);
-    border-radius: var(--cardRadius);
-    */
     display: flex;
     justify-content: space-evenly;
-    /* justify-items: center; */
     padding: var(--mobileCardPadding);
     height: var(--mobileCardHeight);
-    /* position: unset; */
-    /* z-index: 1; */
     width: var(--mobileCardWidth);
   }
   .profileImgCont {
-    /* border: 3px solid white;
-    border-radius: 50%; */
     align-self: center;
-    height: 70px;
-    width: 70px;
   }
-  /*
-  .profileCard img {
-    height: 100%;
-  } */
   .reportForCont {
-    display: flex;
-    flex-direction: column;
-    color: var(--paleBlue);
     margin-top: unset;
     justify-content: center;
-    /* margin-left: 10px; */
-  }
-  .reportForCont h1 {
-    font-size: 14px;
-    font-weight: 300;
-    margin: 0;
   }
   .reportForCont h2 {
-    font-weight: 300;
     font-size: 24px;
-    margin: 0;
-    color: white;
-    letter-spacing: 1px;
   }
   /* ~~~~~~~~~REPORT TYPE CARD~~~~~~~~~~ */
   .reportTypeCard {
-    /* background-color: var(--infoCardBgColor);
-    border-radius: var(--cardRadius); */
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     height: var(--mobileCardHeight);
     width: var(--mobileCardWidth);
     padding: 0 0 5px 0;
-    /* padding-bottom: 10px; */
-    /* position: unset; */
-    /* z-index: 0; */
     top: 150px;
-    /* border: 3px solid white; */
   }
-  /* .reportTypeCard a {
-    transition: var(--transitionTime);
-    color: var(--cardHoverBgColor);
-    text-decoration: none;
-  } */
-  /* .reportTypeCard a:hover {
-    transition: var(--transitionTime);
-    color: white;
-  } */
   .reportTypeCard h3 {
-    font-size: var(--cardHeaderFontSize);
-    font-weight: 300;
-    font-size: 18px;
     padding-top: unset;
   }
   /* ~~~~~~~~~VARIOUS REPORT CARDSSSSS PLURAL CONTAINER~~~~~~~~~~ */
   .reportsCont {
     display: unset;
-    /* flex-direction: column; */
   }
   .reportsRow1,
   .reportsRow2 {
@@ -301,49 +246,18 @@ body {
   .reportsRow2 {
     margin-top: unset;
   }
-  /* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
+  /* ~~~~~~~~~REPORT CONT~~~~~~~~~~ */
   .reportCont {
     width: var(--mobileContsWidth);
     height: 130px;
     margin: 0 0 35px 0;
-    /* border: 3px solid white; */
   }
-  /* .reportImgCard {
-    border-radius: var(--cardRadius);
-    text-align: right;
-    height: 75px;
-    padding-right: 15px;
-  } */
-  /* #workImgCard {
-    background-color: hsl(15, 100%, 70%);
-  }
-  #playImgCard {
-    background-color: hsl(195, 74%, 62%);
-  }
-  #studyImgCard {
-    background-color: hsl(348, 100%, 68%);
-  }
-  #exerciseImgCard {
-    background-color: hsl(145, 58%, 55%);
-  }
-  #socialImgCard {
-    background-color: hsl(264, 64%, 52%);
-  }
-  #selfCareImgCard {
-    background-color: hsl(43, 84%, 65%);
-  } */
   /* ~~~~~~~~~VARIOUS REPORT CARDS~~~~~~~~~~ */
   .reportCard {
-    /* background-color: var(--infoCardBgColor);
-    border-radius: var(--cardRadius);
-    transition: var(--transitionTime); */
-    background-color: pink;
     position: relative;
     width: 285px;
     height: var(--mobileCardHeight);
-    /* z-index: unset; */
     padding: 0 20px 15px;
-    /* top: -100px; */
   }
   .reportsRow1 .reportCard {
     top: unset;
@@ -360,44 +274,15 @@ body {
     top: -40px;
   }
 
-  /* .reportCard:hover {
-    transition: var(--transitionTime);
-    background-color: var(--cardHoverBgColor);
-  } */
-  .reportCard h4 {
-    font-size: var(--cardHeaderFontSize);
-    font-weight: 500;
-  }
-  /* .row1 {
-    display: flex;
-    justify-content: space-between;
-  } */
-  /* .ellipsisCont {
-    align-self: center;
-  }
-  .ellipsisCont a {
-    transition: var(--transitionTime);
-  }
-  .ellipsisCont a path {
-    fill: #bbc0ff;
-  }
-  .ellipsisCont a:hover path {
-    fill: white;
-    transition: var(--transitionTime);
-  } */
   .row2 {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .currentHours {
     font-size: 32px;
-    font-weight: 300;
-    margin: 0;
   }
   .previousHours {
     margin: unset;
     margin-top: unset;
-    /* color: var(--paleBlue); */
   }
 }
