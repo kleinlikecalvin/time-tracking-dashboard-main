@@ -10,7 +10,7 @@
   --infoCardBgColor: hsl(235, 46%, 20%);
   --cardHoverBgColor: hsl(235, 45%, 61%);
   --paleBlue: hsl(236, 100%, 87%);
-  --cardMargin: 25px;
+  /* --cardMargin: 25px; */
   --cardPadding: 15px 30px;
   --transitionTime: 0.5s;
   --mainFontSize: 15px;
