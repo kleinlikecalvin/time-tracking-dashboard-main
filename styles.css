@@ -305,7 +305,7 @@ body {
   .reportCont {
     width: var(--mobileContsWidth);
     height: 130px;
-    margin: 0 0 20px 0;
+    margin: 0 0 35px 0;
     /* border: 3px solid white; */
   }
   /* .reportImgCard {
@@ -339,10 +339,10 @@ body {
     transition: var(--transitionTime); */
     background-color: pink;
     position: relative;
-    width: var(--mobileCardWidth);
+    width: 285px;
     height: var(--mobileCardHeight);
     /* z-index: unset; */
-    padding: 0 10px 15px 10px;
+    padding: 0 20px 15px;
     /* top: -100px; */
   }
   .reportsRow1 .reportCard {
