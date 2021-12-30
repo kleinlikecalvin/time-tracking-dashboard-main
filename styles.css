@@ -142,7 +142,7 @@ body {
   position: absolute;
   width: var(--desktopCardWidth);
   height: var(--desktopCardHeight);
-  z-index: 1;
+  /* z-index: 1; */
   padding: var(--cardPadding);
 }
 .reportsRow1 .reportCard {
@@ -195,6 +195,9 @@ body {
     --mobileContsWidth: 325px;
     --mobileCardWidth: 325px;
     --mobileCardHeight: 95px;
+    --mobileCardPadding: 20px 0 20px 0;
+    --cardMarginBtm: 20px;
+    --mobileContHeight: 200px;
   }
   .mainCont {
     width: 325px;
@@ -207,6 +210,9 @@ body {
   /* ~~~~~~~~~PROFILE CARD~~~~~~~~~~ */
   .profileReportTypeCont {
     width: var(--mobileContsWidth);
+    height: var(--mobileContHeight);
+    margin-bottom: 20px;
+    /* border: 3px solid white; */
   }
   .profileCard {
     /* background-color: hsl(246, 80%, 60%);
@@ -215,11 +221,11 @@ body {
     display: flex;
     justify-content: space-evenly;
     /* justify-items: center; */
-    padding: 20px 0 20px 0;
+    padding: var(--mobileCardPadding);
     height: var(--mobileCardHeight);
-    position: unset;
-    z-index: unset;
-    width: unset;
+    /* position: unset; */
+    /* z-index: 1; */
+    width: var(--mobileCardWidth);
   }
   .profileImgCont {
     /* border: 3px solid white;
@@ -257,12 +263,16 @@ body {
     /* background-color: var(--infoCardBgColor);
     border-radius: var(--cardRadius); */
     display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
     height: var(--mobileCardHeight);
     width: var(--mobileCardWidth);
-    padding: unset;
-    position: unset;
-    z-index: unset;
-    top: unset;
+    padding: 0 0 5px 0;
+    /* padding-bottom: 10px; */
+    /* position: unset; */
+    /* z-index: 0; */
+    top: 150px;
+    /* border: 3px solid white; */
   }
   /* .reportTypeCard a {
     transition: var(--transitionTime);
@@ -294,7 +304,9 @@ body {
   /* ~~~~~~~~~VARIOUS REPORT IMAGE CARDS~~~~~~~~~~ */
   .reportCont {
     width: var(--mobileContsWidth);
-    margin: unset;
+    height: 130px;
+    margin: 0 0 20px 0;
+    /* border: 3px solid white; */
   }
   /* .reportImgCard {
     border-radius: var(--cardRadius);
@@ -325,11 +337,13 @@ body {
     /* background-color: var(--infoCardBgColor);
     border-radius: var(--cardRadius);
     transition: var(--transitionTime); */
-    position: unset;
+    background-color: pink;
+    position: relative;
     width: var(--mobileCardWidth);
     height: var(--mobileCardHeight);
-    z-index: unset;
-    padding: unset;
+    /* z-index: unset; */
+    padding: 0 10px 15px 10px;
+    /* top: -100px; */
   }
   .reportsRow1 .reportCard {
     top: unset;
@@ -337,6 +351,15 @@ body {
   .reportsRow2 .reportCard {
     top: unset;
   }
+  #workCard,
+  #playCard,
+  #studyCard,
+  #exerciseCard,
+  #socialCard,
+  #selfCareCard {
+    top: -40px;
+  }
+
   /* .reportCard:hover {
     transition: var(--transitionTime);
     background-color: var(--cardHoverBgColor);
